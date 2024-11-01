@@ -13,10 +13,10 @@ function RegisterView() {
     setError("");
     const form = event.target as HTMLFormElement;
     const data = {
-      email: form.email.value,
-      fullname: form.fullname.value,
-      phone: form.phone.value,
-      password: form.password.value,
+      email: form.email?.value,
+      fullname: form.fullname?.value,
+      phone: form.phone?.value,
+      password: form.password?.value,
     };
 
     const result = await fetch("/api/user/register", {
