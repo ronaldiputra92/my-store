@@ -89,6 +89,21 @@ function LoginView() {
                 {isLoading ? "Loading..." : "Login"}
               </button>
             </div>
+            <hr className="border-b-[1px] border-gray-950 my-4" />
+            <div className="mt-4">
+              <button
+                onClick={() =>
+                  signIn("google", {
+                    callbackUrl: callbackURL,
+                    redirect: false,
+                  })
+                }
+                type="button"
+                className="bg-slate-950 w-full hover:bg-slate-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-center items-center gap-2"
+              >
+                <i className="bx bxl-google text-[20px]"></i> Login With Google
+              </button>
+            </div>
             <p className="text-center text-gray-950 text-md mt-4">
               Dont Have an account?{" "}
               <Link href="/auth/register" className="text-blue-600 font-bold">
